@@ -48,3 +48,8 @@ print('Hola me llamo {}'.format(x))
 pi = 31.141592
 print('Py: {:.3f}'.format(pi))
 
+l = [1,2,3,4,5,6]
+print('len:'+len(l))
+for i,j in enumerate (l+l):
+    print(l)
+print('len:'+len(l))
