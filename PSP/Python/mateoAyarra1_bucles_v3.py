@@ -19,6 +19,6 @@ while(n!=-1):
     if (n!=-1):
         numeros.append(n)
 
-for 
+
 
 print('número de elementos par: {} \nSuma: {} \nNumero de elementos impar: {}\n Producto: {}'.format(pares,sumaP,impares,productoI))
