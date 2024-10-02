@@ -1,5 +1,5 @@
 #x = int(input('Dime las dimensiones:'))
-x=3
+x=int(input("Introduco el rango de la matriz:"))
 m=[]
 for i in range(x):
     m.append([])
