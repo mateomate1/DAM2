@@ -1,4 +1,3 @@
-#x = int(input('Dime las dimensiones:'))
 x=int(input("Introduco el rango de la matriz:"))
 m=[]
 for i in range(x):

@@ -13,11 +13,34 @@ Hacer las siguientes funciones
 '''
 x=''
 inn=''
-t=('a','e','i','o','u')
+vocals=('a','e','i','o','u')
+
+def concate(a:str, b:str):
+    salida=''
+    if not a:
+        salida = b
+    elif not b:
+        salida = a
+    else :
+        salida = a+' '+b
+    return (salida)
+
+def contar_caracter(cadena:str, caracter:chr):
+    return cadena.count(caracter)
+
+def mayus(c:str):
+    mayus = ''
+    if c:
+        mayus = str(c[0].upper()+c[1:])
+    return mayus
 
 while (inn!='EOF'):
+    inn = mayus(inn)
+    x = concate(x,inn)
+    print(x)
     inn=str(input('Introduce la siguiente palabra (EOF para dejar de introducir palabras):'))
-    x+=inn.title()+' 'if inn!='EOF'else ''
 
 print(x)
 
+for i in vocals:
+    print('Hay {} \'{}\' en el texto'.format(str(contar_caracter(x,i)),i))
