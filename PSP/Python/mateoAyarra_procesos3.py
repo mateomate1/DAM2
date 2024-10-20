@@ -11,18 +11,26 @@ El nombre del fichero lo pasará el padre a los hijos como parámetro.
 Subir el archivo nombreApellido_procesos3.py
 '''
 
-def escritor(file, inn):
-    with open(file, 'a') as w:
-        w.write(inn)
+def escritor(fichero, input):
+    with open(fichero, 'a') as w:
+        w.write(input+'\n')
+
+def lector(fichero):
+    with open(fichero, 'r') as r:
+        print(r.read())
 
 def main():
     file = "mateoAyarra_procesos3.txt"
     valid = True
     while valid:
+        # Pedir texto:
         inn = input('Introduce texto (-1 para salir):')
-        
-
-
+        if (inn != '-1'):
+            escritor(file, inn)
+        else:
+            valid = False
+            print('Terminando programa...')
+        lector(file)
 
 if __name__ == "__main__":
     main()
