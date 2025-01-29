@@ -1,0 +1,4 @@
+https://aws.amazon.com/es/nosql/
+https://azure.microsoft.com/es-mx/resources/cloud-computing-dictionary/what-is-nosql-database
+https://cloud.google.com/discover/what-is-nosql
+https://www.arsys.es/blog/bases-de-datos-nosql-que-son-tipos-y-ventajas
