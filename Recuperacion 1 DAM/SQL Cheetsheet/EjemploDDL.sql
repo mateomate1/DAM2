@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS restricciones_metodo2(
 
 CREATE TABLE IF NOT EXISTS restricciones(
 	caracter_de_longitud_definida CHAR(50),
-    caracter_de_longitud_limitada VARCHAR(50),
-    numero_
+    caracter_de_longitud_limitada VARCHAR(50)
 );
 
