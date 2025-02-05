@@ -19,7 +19,7 @@ DESC nombre_tabla;
 -- SOURCE fichero.sql
 
 -- Lienea de creacion de la BDD incluyendo la clausula IF NOT EXISTS, el juego de caracteres y el cotejamiento
-CREATE DATABASE IF NOT EXISTS nombre_bd CHARACTER SET juego_de_caracteres COLLATE cotejamiento; 
+CREATE DATABASE IF NOT EXISTS nombre_bd CHARACTER SET juego_de_caracteres COLLATE cotejamiento;
 /*
 	> CHARACTER SET: Juego de caracteres que se usa en la BDD en nuestro caso usaremos el por defecto (UTF8mb4)
     > COLLATE: Critrtio de ordenacion de cadenas de caracteres que se usara, usaremos el por defecto (utf8mb4_0900_ai_ci)
@@ -52,13 +52,13 @@ CHARACTER SET charset_name
  
   -- Restricciones sobre las columnas de una tabla: 
  /*
- > NOT NULL: Evita que un campo pueda tener valores vacíos.
- > UNIQUE: Se asegura de que todos los valores de una columna sean distintos.
- > PRIMARY KEY: Clave primaria. Combina NOT NULL y UNIQUE. Tiene un índice asociado.
- > FOREIGN KEY: Clave foránea. Identifica de forma única una fila de otra tabla. (NO USARLA SIN HABER CREADO LA REFEREMCIA FORANEA)
- > CHECK (CHECK (nombre_fila BETWEEN X AND Y)): Garantiza que todos los valores de una columna cumplen determinada condición.
- > DEFAULT: Fija el valor por defecto para un campo cuando no se especifica uno.
- > AUTO_INCREMENT: Columna autonumérica. Su valor se incrementa automáticamente en cada inserción de una fila. Sólo se utiliza en campos de tipo entero.
+	> NOT NULL: Evita que un campo pueda tener valores vacíos.
+	> UNIQUE: Se asegura de que todos los valores de una columna sean distintos.
+	> PRIMARY KEY: Clave primaria. Combina NOT NULL y UNIQUE. Tiene un índice asociado.
+	> FOREIGN KEY: Clave foránea. Identifica de forma única una fila de otra tabla. (NO USARLA SIN HABER CREADO LA REFEREMCIA FORANEA)
+	> CHECK (CHECK (nombre_fila BETWEEN X AND Y)): Garantiza que todos los valores de una columna cumplen determinada condición.
+	> DEFAULT: Fija el valor por defecto para un campo cuando no se especifica uno.
+	> AUTO_INCREMENT: Columna autonumérica. Su valor se incrementa automáticamente en cada inserción de una fila. Sólo se utiliza en campos de tipo entero.
  */
  
  -- Tipos de datos:
@@ -90,7 +90,7 @@ CHARACTER SET charset_name
         - TINYINT(1): True = 0 False != 0
         - BIT: False = 0 True = 1
         - CHAR(1): False = 'N'/'F'/'0' True = 'Y'/'T'/'1'
-        - ENUM(x,y): El valor depende de lo que se designe a la hora de comprobarlo.
+        - ENUM(x,y): El valor depende de lo que se designe a la hora de comprobarlo
     > Enumerados y conjuntos:
 		- ENUM(x,y,z,...): Conjunto de valores de texto que permite seleccionar uno de entre las diferentes opciones que se introduzcan
         - SET(x,y,z,...): Conjunto de valores de texto que permite seleccionar varios valores entre las diferentes opciones que se introduzcan
@@ -98,7 +98,29 @@ CHARACTER SET charset_name
 
 -- Claves y restricciones de borrado(ON DELETE)/ de actualizacion(ON UPDATE):
 /*
-	- RESTRICT/NO ACTION: Equivale a no poner nada, en el caso de eliminar/actualizar un elemento referenciado no te dejara.
-    - CASCADE: En el caso de eliminar/actualizar un elemento referenciado eliminara/actualizara tambien la referencia.
-    - SET NULL: En el caso de eliminar/actualizar un elemento referenciado cambiara la referencia a null.
+	CONSTRAINT rnombre_restriccion FOREIGN KEY (columna_tabla) REFERENCES ciudades (columna_foranea) ON DELETE/UPDATE (RESTRICT/NO ACTION/CASCADE/SET NULL)
+		- RESTRICT/NO ACTION: Equivale a no poner nada, en el caso de eliminar/actualizar un elemento referenciado no te dejara.
+		- CASCADE: En el caso de eliminar/actualizar un elemento referenciado eliminara/actualizara tambien la referencia.
+		- SET NULL: En el caso de eliminar/actualizar un elemento referenciado cambiara la referencia a null.
+*/
+
+-- Aniadir/eliminar restricciones de integridad de datos
+/*
+	> Aniadir/eliminar restricciones de integridad de datos: 
+		- ALTER TABLE nombre_tabla ADD/DROP CONSTRAIN nombre_constrain;
+	> Aniadir/renombrar/modificar/borrar una columna: 
+		- ALTER TABLE nombre_tabla ADD/MODIFY nombre_columna tipo_dato;
+        - ALTER TABLE nombre_tabla RENAME nombre_columna TO nuevo_nombre;
+        - ALTER TABLE nombre_tabla DROP COLUMN nombre_columna;
+    > Modificar restricciones a nivel de columna: 
+		- ALTER TABLE nombre_tabla ALTER nombre_columna SET DEFAULT nuevo_valor;
+        - ALTER TABLE nombre_tabla ALTER nombre_columna DROP DEFAULT;
+        - ALTER TABLE nombre_tabla MODIFY nombre_columna tipo_dato_nuevo NOT NULL;
+*/
+
+-- Vistas: Tablas virtuales sin contenido que devuelven las filas resultantes de una sentencia SELECT, siendo mas eficientes en tiempo de ejecucion.
+/*
+	CREATE VIEW nombre_view (campo1, campo2...) AS <sentencia SELECT>;
+    DROP VIEW IF EXIST nombre_view;
+    ALTER VIEW nombre_view (campo1, campo2...) AS <sentencia SELECT>;
 */
