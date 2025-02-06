@@ -36,3 +36,34 @@ CREATE TABLE IF NOT EXISTS restricciones(
     caracter_de_longitud_limitada VARCHAR(50)
 );
 
+ALTER TABLE restricciones ADD INDEX idx_nombre(caracter_de_longitud_definida);
+SHOW INDEXES FROM restricciones;
+
+EXPLAIN SELECT * FROM restricciones;
+
+CREATE USER 'mateo'@'localhost' IDENTIFIED BY 'password';
+CREATE USER 'sonia'@'localhost' IDENTIFIED BY 'pass';
+
+GRANT select, insert on nombre_bd.* to 'mateo'@'localhost';
+REVOKE all on nombre_bd.* from 'mateo'@'localhost';
+
+-- Vista de usuarios:
+show databases;
+use information_schema;
+select * from USER_ATTRIBUTES;
+
+-- Vista de usuarios y permisos: 
+show databases;
+use information_schema;
+show tables;
+select * 
+from USER_ATTRIBUTES
+join USER_PRIVILEGES;
+
+select * from USER_PRIVILEGES;
+
+SHOW GRANTS FOR 'mateo'@'localhost';
+SHOW GRANTS FOR 'root'@'localhost';
+
+select *
+from mysql user;
