@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\alumno\Desktop\SimpleJarToExe\SimpleJarToExeTest.jar</jar>
+  <outfile>C:\Users\alumno\Desktop\SimpleJarToExe\SimpleJarToExeTest.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\alumno\Desktop\SimpleJarToExe\LOGO_SECPLUS_authentication.ico</icon>
+  <classPath>
+    <mainClass>simplejartoexe.simplejartoexetest.Main</mainClass>
+  </classPath>
+  <jre>
+    <path>C:\Program Files\Java\jdk-23\bin</path>
+    <requiresJdk>false</requiresJdk>
+    <requires64Bit>false</requires64Bit>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+  </jre>
+</launch4jConfig>
