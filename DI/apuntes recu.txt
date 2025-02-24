@@ -1,0 +1,3 @@
+minimo 5 max 10 caracteres
+1 mayuscula como minimo
+poner minimo en la redimension
