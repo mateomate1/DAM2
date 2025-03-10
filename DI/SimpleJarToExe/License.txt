@@ -1,0 +1,7 @@
+Licencia de uso
+
+Este es un archivo de prueba creado por un estudiante para fines educativos. No se garantiza que funcione correctamente en todos los casos. Al usar este software, aceptas los siguientes términos:
+
+1. El software es solo para uso personal y educativo.
+2. No puedes redistribuir, modificar ni vender el software.
+3. El creador no se hace responsable de cualquier daño causado por el uso de este software.
