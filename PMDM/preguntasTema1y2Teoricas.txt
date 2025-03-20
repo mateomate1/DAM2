@@ -1,0 +1,91 @@
+Los sistemas operativos de Android:
+a Es el sistema operativo lider en el mercado
+b Es de caracter abierto
+c Esta formado por capas
+d Todas las respuestas son correctas
+
+Los dispositivos moviles
+a Hay que tener en cuenta el ancho de banda de la conexion a internet
+b Su limitacion esta relacionada con el hardware
+c Todas las respuestas son correctas
+d Se debe optimizar el uso del procesador
+
+¿Que significa SMS?
+a Service Message Short
+b Short Message Service
+c Short Message System
+d System Message Short 
+
+El archivo AndroidManifest
+
+a Es un codigo java que incluye configuraciones a nivel de módulo de aplicacion móvil
+b Es un codigo XML que incluye configuraciones a nives de modulo de aplicacion móvil
+c No existe en todos los proyectos que creamos en Android Studio
+d Es un archivo que no se puede modificar
+
+En el ciclo de vida de un activity el primer metodo que se lanza es:
+a el metodo onPause
+b el metodo onStart
+c el metodo onResume
+d el metodo onCreate
+
+La tecnologia 3G:
+a Se comienza a navegar por internet desde un dispositivo movil
+b Converge la comunicacion por voz y del envio de datos
+c Esta basada en los UMTS
+d Todas las respuestas son correctas
+
+Los archivos que abre directament el programa Android Studio al iniciar un nuevo proyecto son:
+
+a Main_Activity.java y activitymain.xml
+b Main_Activity.xml y activitymain.java
+c MainActivity.xml y activity_main.java
+d MainActivity.java y activity_main.xml
+
+Cuando ejecuto por primera vez una APP:
+a Se ejecutan solamente los métodos onCreate y onStart
+b Todas las respuestas son incorrectas
+c La mayoria del código inicial está en el método onResume
+d Se ejecutan siempre los métodos onCreate, onStart y onResume
+
+El middlewere: 
+a No es esencial para la existencia de aplicaciones.
+b El usuario puede ver su contenido
+c No es una parte del sistema operativo
+d Ofrece servicios como el motor de mensajeria y comunicaciones e interpretes web
+
+La parte del sistema operativo que nos da acceso al hardware ofreciendo servicios a través de drivers, gestor de procesos, sistemas de archivo y gestion de memoria es:
+a Middlewere
+b El núcleo o kernel
+c Interfaz de usuario
+d Aplicaciones nativas
+
+¿Que es el activity?
+a Todas las respuestas son correctas.
+b Es el componente que se encarga de gestionar las interacciones con el usuario.
+c Contiene toda la logica de la aplicacion
+d Es el componente principal de una aplicacion
+
+Las caracteristicas de los dispositivos moviles 
+a Todas las respuestas son correctas.
+b Se agrupan en 4: capacidad de procesado, tamaño, movilidad y conectividad
+c Son las mismas que las de un ordenador de sobremesa
+d Son facilidad de mobilidad y tamaño
+
+Con respecto a los tipos de dispositivos moviles
+a La PDA y los Notebooks están en desuso
+b Las tablets y los ebooks tienen las mismas caracteristicas
+c los smartphones son igual que los telefonos móviles
+d Todas las respuestas son erroneas
+
+Los sistemas operativos IOS
+a No está formado por capas
+b Es el sistema operativo lider en el mercado
+c Esta basado en la manipulacion directa por su pantalla multifuncional
+d Todas las respuestas son correctas
+
+Enumera las carpetas principales existen en la estructura basica de un proyecto Android Studio y esplica que contienen y para que se utilizan
+
+Enumera las caracteristicas de los smartphones
+
+Enumera los metodos por los que puede pasar un Activity durante su ciclo de vida y explica su funcionalidad
