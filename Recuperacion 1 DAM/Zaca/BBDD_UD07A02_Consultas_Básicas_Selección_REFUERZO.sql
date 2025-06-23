@@ -18,10 +18,28 @@
 */
 
 /* 3. Nombre y apellido de los actores que hayan participado en películas con rating 'PG'*/
+USE SAKILA;
+SELECT a.first_name, a.last_name, f.title, f.rating
+FROM film f
+JOIN film_actor fa ON f.film_id = fa.film_id
+JOIN actor a ON fa.actor_id = a.actor_id
+WHERE f.rating = 'pg'
+ORDER BY f.title;
 
 /* 5. Nombre y apellido de los clientes junto con el título de la película y la categoría de aquellos que hayan alquilado una película con categoría 'Action' */
+SELECT CONCAT(c.first_name,' ' , c.last_name) AS 'NOMBRE Y APELLIDO', f.title, cy.name AS 'CATEGORIA'
+FROM customer c
+JOIN rental r ON c.customer_id = r.customer_id
+JOIN inventory i ON r.inventory_id = i.inventory_id
+JOIN film f ON i.film_id = f.film_id
+JOIN film_category fc ON fc.film_id = f.film_id
+JOIN category cy ON fc.category_id = cy.category_id
+WHERE cy.name LIKE 'Action';
 
 /* 6. Número de películas cuyo título tenga una 'a' en la 2ª posición */
+SELECT COUNT(film_id)
+FROM film
+WHERE title LIKE '_A%';
 
 /* 7. Importe mínimo de los alquileres de películas cuya duración de alquiler sea 3 días*/
 
